@@ -38,6 +38,9 @@ make kvm
 boot.S主要是引导和配置GRUB2，传递一些参数给GRUB2，例如：是否开始图形模式，初始化内核页大小，栈指针位置，初始化multiboot，为multiboot分配一块内存空间，用于保存multiboot信息，最后开启分页模式  
   main.S主要是配置和加载GDT，IDT，接着跳转到正式内核的初始化文件"init.c"  
 
+## hhk.c
+  hhk.c文件主要包含了在main.S中会使用到的高半核(high half kernel)初始化函数, 例如初始化页面，以及multiboot
+
 # GDT
   施工中...
 
